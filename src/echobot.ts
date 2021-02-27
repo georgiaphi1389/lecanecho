@@ -68,7 +68,67 @@ class EchoBot {
             config = JSON.parse(fs.readFileSync("config.json").toString());
         } else if (process.env.ECHOBOT_CONFIG_JSON) {
             // Parse the env var contents as JSON.
-            config = JSON.parse(process.env.ECHOBOT_CONFIG_JSON);
+            config = JSON.parse({
+  "token": "MzI3MjM3NzA0NTUzMjAxNjY1.YDqjog.TmQ1lRCaEj4REge6rFZN3Kz5Wnw",
+  "redirects": [
+    {
+      "sources": [
+        "811402320889249803",
+        "811403534238875648",
+        "811401815592534047",
+        "811403607425417217",
+        "811402546299273269",
+        "811400913167843368",
+        "811400538498531339",
+        "811402455610687528",
+        "811401353947119627",
+        "811400989520691260",
+     "811401449635315712",
+     "811400775631896597",
+     "811403082239967273",
+     "813833773396656190",
+     "811403725583286323",
+     "811403398028722267",
+     "811403467520344115",
+     "811402915389505547",
+     "811403247453339668",
+   "812114135067131977",
+   "811403247453339668",
+   "811402679783391273",
+   "814708394769645589",
+   "811403147557863485",
+   "811402138088636476",
+   "811401538105901076",
+   "811401049708560384",
+   "811403667613024307",
+   "811402220225822732",
+   "811401882345930752",
+   "811402981526208552",
+   "811399222397894706",
+   "811402377478799370",
+   "811401671632486430",
+   "811401748509360128",
+   "811402765816299540",
+   "811401271189700608"
+      ],
+      "destinations": [
+        "815266028031574066"
+      ],
+      "options": {
+        "title": "Live Confessional Update",
+        "richEmbed": true,
+        "richEmbedColor": 12657969,
+        "includeSource": true,
+        "removeEveryone": true,
+        "removeHere": true,
+        "copyRichEmbed": true,
+        "copyAttachments": false,
+        "minLength": 0,
+        "allowList": []
+      }
+    }
+  ]
+            };
         } else {
             logger.error("No configuration could be found. Either create a config.json file or put the config in the ECHOBOT_CONFIG_JSON environment variable.");
             return false;
